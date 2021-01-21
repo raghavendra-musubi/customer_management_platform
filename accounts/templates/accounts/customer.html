@@ -2,6 +2,94 @@
 
 {% block content %}
 
-<h1> Customers </h1>
+<section class="d-flex flex-row justify-content-center">
+
+    <div class="card m-3 bg-dark text-light">
+
+        <p class="card-header"> <b>Customer</b> </p>
+
+        <div class="card-body ">
+
+            <button class="btn btn-info w-100"> Update Customer </button>
+            
+            <button class="btn btn-danger w-100 my-3"> Delete Customer </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="card m-3 bg-dark text-light">
+
+        <p class="card-header"> <b>Contact Information</b> </p>
+
+        <div class="card-body ">
+
+            <p>Email</p>
+            <p>Phone</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="card m-3 bg-dark text-light">
+
+        <p class="card-header"> <b>Total Orders</b> </p>
+
+        <div class="card-body">
+
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="card m-3">
+
+
+    <div class="card-body">
+        <button class="btn btn-primary"> Search </button>
+    </div>
+    
+
+</section>
+
+<section class="card m-3">
+
+    <div class="table-responsive">
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Product</th>
+                <th scope="col">Category</th>
+                <th scope="col">Date Ordered</th>
+                <th scope="col">Status</th>
+                <th scope="col">Update</th>
+                <th scope="col">Remove</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+              </tr>
+    
+            </tbody>
+          </table>
+
+    </div>
+
+
+    
+
+</section>
 
 {% endblock content %} 
