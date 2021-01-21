@@ -2,6 +2,129 @@
 
 {% block content %}
 
-<h1>Dashboard</h1>
+
+<section class="d-flex flex-row justify-content-center">
+
+    <div class="card m-3 bg-dark text-light">
+
+        <p class="card-header"> <b>Total Orders</b> </p>
+
+        <div class="card-body ">
+
+
+
+        </div>
+
+    </div>
+
+
+    <div class="card m-3 bg-dark text-light">
+
+        <p class="card-header"> <b>Orders Delivered</b> </p>
+
+        <div class="card-body ">
+
+
+
+        </div>
+
+    </div>
+
+
+    <div class="card m-3 bg-dark text-light">
+
+        <p class="card-header"> <b>Orders Pending</b> </p>
+
+        <div class="card-body">
+
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <div class="container">
+
+        <div class="card m-3">
+
+            <h5 class="card-header">Customers</h5>
+
+            <div class="card-body table-responsive">
+
+                <table class="table table-striped">
+
+                    <thead class="thead-dark">
+                        <tr>
+
+                            <th scope="col">Customer</th>
+                            <th scope="col">Orders</th>
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+
+                            <td>Mark</td>
+                            <td>Otto</td>
+
+                        </tr>
+                    </tbody>
+
+                </table>
+
+                <a href="#" class="btn btn-warning w-100">Create Customer</a>
+
+            </div>
+
+        </div>
+
+        <div class="card m-3">
+
+            <h5 class="card-header">Last 5 Orders</h5>
+
+            <div class="card-body table-responsive">
+
+                <table class="table table-striped">
+
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col">Date Ordered</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Update</th>
+                            <th scope="col">Remove</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>Otto</td>
+                            <td>Otto</td>
+                            <td>Otto</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+                <a href="#" class="btn btn-warning w-100">Create Order</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
 
 {% endblock content %}
