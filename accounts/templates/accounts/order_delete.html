@@ -4,26 +4,25 @@
 
 <section class="card m-3">
 
-<div class="card-body text-center">
+    <div class="card-body text-center">
 
-    <p> Are you sure you want to delete the following order? </p> 
-    
-    <h5>{{ order.product }} by {{ order.customer}} </h5>
+        <p> Are you sure you want to delete the following order? </p>
+
+        <h5>{{ order.product }} by {{ order.customer}} </h5>
 
 
+    </div>
 
-</form>
+    <div class="card-footer text-center">
 
-</div>
+        <form action="{% url 'order_delete' order.id %}" method="POST">
+            {% csrf_token %}
+            <a class="btn btn-warning" href="{% url 'home' %}">Cancel</a>
+            <input class="btn btn-danger" type="submit" name="Confirm">
 
-<div class="card-footer text-center">
+        </form>
 
-    <form action="{% url 'order_delete' order.id %}" method="POST" >
-        {% csrf_token %}
-        <a class="btn btn-info" href="{% url 'home' %}">Cancel</a>
-        <input class="btn btn-danger" type="submit" name="Confirm">
-
-</div>
+    </div>
 
 
 </section>

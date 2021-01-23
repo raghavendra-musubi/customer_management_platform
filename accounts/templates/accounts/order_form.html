@@ -2,10 +2,26 @@
 
 {% block content %}
 
-<form action="" method="POST">
-    {{form}}
-    {% csrf_token %}
-    <input type="submit" name="Submit">
-</form>
+<section class="card m-3">
+
+    <form action="" method="POST">
+
+        <div class="card-body text-center">
+
+            {% csrf_token %}
+
+            {{form}}
+
+        </div>
+
+        <div class="card-footer text-center">
+
+            <input class="btn btn-primary" type="submit" name="Create">
+
+        </div>
+
+    </form>
+
+</section>
 
 {% endblock content %}
