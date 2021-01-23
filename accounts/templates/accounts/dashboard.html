@@ -5,9 +5,9 @@
 
 <section class="d-flex flex-row justify-content-center">
 
-    <div class="card m-3 bg-dark text-light">
+    <div class="card m-3">
 
-        <p class="card-header"> <b>Total Orders</b> </p>
+        <p class="card-header bg-primary text-light"> <b>Total Orders</b> </p>
 
         <div class="card-body text-center">
 
@@ -18,9 +18,9 @@
     </div>
 
 
-    <div class="card m-3 bg-dark text-light">
+    <div class="card m-3">
 
-        <p class="card-header"> <b>Orders Delivered</b> </p>
+        <p class="card-header bg-primary text-light"> <b>Orders Delivered</b> </p>
 
         <div class="card-body text-center">
 
@@ -31,9 +31,9 @@
     </div>
 
 
-    <div class="card m-3 bg-dark text-light">
+    <div class="card m-3 ">
 
-        <p class="card-header"> <b>Orders Pending</b> </p>
+        <p class="card-header bg-primary text-light"> <b>Orders Pending</b> </p>
 
         <div class="card-body text-center">
 
@@ -119,7 +119,7 @@
 
                 </table>
 
-                <a href="#" class="btn btn-primary w-100">Create Order</a>
+                <a href="{% url 'order_create' %}" class="btn btn-primary w-100">Create Order</a>
 
             </div>
 

@@ -1,0 +1,34 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+
+<section class="card m-3">
+
+<div class="card-body text-center">
+
+    <p> Are you sure you want to delete the following order? </p> 
+    
+    <h5>{{ order.product }} by {{ order.customer}} </h5>
+
+
+
+</form>
+
+</div>
+
+<div class="card-footer text-center">
+
+    <form action="{% url 'order_delete' order.id %}" method="POST" >
+        {% csrf_token %}
+        <a class="btn btn-info" href="{% url 'home' %}">Cancel</a>
+        <input class="btn btn-danger" type="submit" name="Confirm">
+
+</div>
+
+
+</section>
+
+
+
+
+{% endblock content %}

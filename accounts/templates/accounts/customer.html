@@ -2,11 +2,11 @@
 
 {% block content %}
 
-<section class="d-flex flex-row justify-content-center">
+<section class="d-flex flex-column justify-content-center">
 
-    <div class="card m-3 bg-dark text-light">
+    <div class="card m-3">
 
-        <p class="card-header"> <b>Customer</b> </p>
+        <p class="card-header bg-primary text-light"> <b>Customer</b> </p>
 
         <div class="card-body ">
 
@@ -14,7 +14,7 @@
 
             <hr>
 
-            <button class="btn btn-info w-100"> Update Customer </button>
+            <button class="btn btn-primary w-100"> Update Customer </button>
 
             <button class="btn btn-danger w-100 my-3"> Delete Customer </button>
 
@@ -23,9 +23,9 @@
     </div>
 
 
-    <div class="card m-3 bg-dark text-light">
+    <div class="card m-3">
 
-        <p class="card-header"> <b>Contact Information</b> </p>
+        <p class="card-header bg-primary text-light"> <b>Contact Information</b> </p>
 
         <div class="card-body ">
 
@@ -37,9 +37,9 @@
     </div>
 
 
-    <div class="card m-3 bg-dark text-light">
+    <div class="card m-3">
 
-        <p class="card-header"> <b>Total Orders</b> </p>
+        <p class="card-header bg-primary text-light"> <b>Total Orders</b> </p>
 
         <div class="card-body text-center">
 
@@ -84,8 +84,8 @@
                     <td>{{order.product.category}}</td>
                     <td>{{order.product.date_created}}</td>
                     <td>{{order.status}}</td>
-                    <td><a href="#" class="btn btn-sm btn-info">Update</a></td>
-                    <td><a href="#" class="btn btn-sm btn-danger">Remove</a></td>
+                    <td><a href="{% url 'order_update' order.id %}" class="btn btn-sm btn-primary">Update</a></td>
+                    <td><a href="{% url 'order_delete' order.id %}" class="btn btn-sm btn-danger">Remove</a></td>
                 </tr>
                 {% endfor %}
 
