@@ -6,7 +6,7 @@ from django.http import HttpResponse
 def home(request):
     return render(request, 'accounts/dashboard.html')
 
-def about(request):
+def products(request):
     return render(request, 'accounts/products.html')
 
 def customer(request):
