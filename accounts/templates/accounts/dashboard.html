@@ -72,7 +72,7 @@
                         {% for customer in customers %}
                         <tr>
 
-                            <td>{{customer.name}}</td>
+                            <td> <a href="{% url 'customer' customer.id %}">{{customer.name}}</a> </td>
                             <td>{{customer.name.orders | length}} </td>
 
                         </tr>

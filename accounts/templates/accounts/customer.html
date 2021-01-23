@@ -10,8 +10,12 @@
 
         <div class="card-body ">
 
+            <h3> {{ customer.name }} </h3>
+
+            <hr>
+
             <button class="btn btn-info w-100"> Update Customer </button>
-            
+
             <button class="btn btn-danger w-100 my-3"> Delete Customer </button>
 
         </div>
@@ -25,8 +29,8 @@
 
         <div class="card-body ">
 
-            <p>Email</p>
-            <p>Phone</p>
+            <p> <u>Email</u> <br> {{ customer.email }} </p>
+            <p> <u>Phone</u> <br> {{ customer.phone }} </p>
 
         </div>
 
@@ -37,9 +41,9 @@
 
         <p class="card-header"> <b>Total Orders</b> </p>
 
-        <div class="card-body">
+        <div class="card-body text-center">
 
-
+            <h3> {{ orders | length }} </h3>
 
         </div>
 
@@ -53,7 +57,7 @@
     <div class="card-body">
         <button class="btn btn-primary"> Search </button>
     </div>
-    
+
 
 </section>
 
@@ -61,35 +65,38 @@
 
     <div class="table-responsive">
 
-        <table class="table">
+        <table class="table table-striped">
             <thead>
-              <tr>
-                <th scope="col">Product</th>
-                <th scope="col">Category</th>
-                <th scope="col">Date Ordered</th>
-                <th scope="col">Status</th>
-                <th scope="col">Update</th>
-                <th scope="col">Remove</th>
-              </tr>
+                <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Date Ordered</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Remove</th>
+                </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-              </tr>
-    
+
+                {% for order in orders %}
+                <tr>
+                    <td>{{order.product}}</td>
+                    <td>{{order.product.category}}</td>
+                    <td>{{order.product.date_created}}</td>
+                    <td>{{order.status}}</td>
+                    <td><a href="#" class="btn btn-sm btn-info">Update</a></td>
+                    <td><a href="#" class="btn btn-sm btn-danger">Remove</a></td>
+                </tr>
+                {% endfor %}
+
             </tbody>
-          </table>
+        </table>
 
     </div>
 
 
-    
+
 
 </section>
 
-{% endblock content %} 
+{% endblock content %}
