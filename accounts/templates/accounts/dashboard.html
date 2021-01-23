@@ -9,9 +9,9 @@
 
         <p class="card-header"> <b>Total Orders</b> </p>
 
-        <div class="card-body ">
+        <div class="card-body text-center">
 
-
+            <h2> {{ total_orders }} </h2>
 
         </div>
 
@@ -22,9 +22,9 @@
 
         <p class="card-header"> <b>Orders Delivered</b> </p>
 
-        <div class="card-body ">
+        <div class="card-body text-center">
 
-
+           <h2> {{ delivered }} </h2> 
 
         </div>
 
@@ -35,9 +35,9 @@
 
         <p class="card-header"> <b>Orders Pending</b> </p>
 
-        <div class="card-body">
+        <div class="card-body text-center">
 
-
+            <h2> {{ pending }} </h2>
 
         </div>
 
@@ -69,12 +69,14 @@
                     </thead>
 
                     <tbody>
+                        {% for customer in customers %}
                         <tr>
 
-                            <td>Mark</td>
-                            <td>Otto</td>
+                            <td>{{customer.name}}</td>
+                            <td>{{customer.name.orders | length}} </td>
 
                         </tr>
+                        {% endfor %}
                     </tbody>
 
                 </table>
@@ -104,13 +106,15 @@
                     </thead>
 
                     <tbody>
+                        {% for order in orders %}
                         <tr>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
-                            <td>Otto</td>
+                            <td>{{ order.product }}</td>
+                            <td>{{ order.date_created }}</td>
+                            <td>{{ order.status }}</td>
+                            <td><a href="#">Update</a></td>
+                            <td><a href="#">Remove</a></td>
                         </tr>
+                        {% endfor %}
                     </tbody>
 
                 </table>

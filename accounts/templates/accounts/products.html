@@ -11,12 +11,24 @@
 <div class="card card-body m-3 ">
 
     <div class="table-responsive">
-        <table class="table">
+        <table class="table table-striped">
             <thead>
                 <th> Product </th>
                 <th> Category </th>
                 <th> Price </th>
             </thead>
+
+            <tbody>
+
+                {% for product in products %}
+                    <tr> 
+                        <th>  {{ product.name }}  </th>
+                        <th>  {{ product.category }}  </th>
+                        <th>  {{ product.price }}  </th>
+                    </tr> 
+                {% endfor %}
+
+            </tbody>
         </table>
     </div>
     
